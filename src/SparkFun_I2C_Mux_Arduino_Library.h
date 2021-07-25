@@ -31,7 +31,8 @@ public:
   uint8_t getPortState();                                                                  //Returns current 8-bit wide state. May have multiple bits set in 8-bit field.
   bool enablePort(uint8_t portNumber);                                                     //Enable a single port without affecting other bits
   bool disablePort(uint8_t portNumber);                                                    //Disable a single port without affecting other bits
-
+  uint8_t getAddress();
+  
 private:
   TwoWire *_i2cPort;                                  //This stores the user's requested i2c port
   uint8_t _deviceAddress = QWIIC_MUX_DEFAULT_ADDRESS; //Default unshifted 7-bit address

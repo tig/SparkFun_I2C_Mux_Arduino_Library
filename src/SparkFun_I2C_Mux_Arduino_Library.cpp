@@ -139,3 +139,7 @@ bool QWIICMUX::disablePort(uint8_t portNumber)
 
   return (setPortState(settings));
 }
+
+uint8_t QWIICMUX::getAddress() {
+  return _deviceAddress;
+}
